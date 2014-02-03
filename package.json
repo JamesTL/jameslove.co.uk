@@ -1,0 +1,23 @@
+{
+  "name": "jameslove.co.uk",
+  "version": "0.0.1",
+  "author": "James Love",
+  "description": "Source code for jameslove.co.uk",
+  "license": "MIT",
+  "readmeFilename": "Readme.md",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JamesTL/jameslove.co.uk.git"
+  },
+  "devDependencies": {
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt": "~0.4.1",
+    "grunt-includes": "~0.4.0",
+    "grunt-contrib-less": "~0.6.4",
+     "grunt-includes": "~0.4.1"
+  }
+}
