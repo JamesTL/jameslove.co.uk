@@ -7,7 +7,6 @@ module.exports = function(grunt) {
     clean: {
       build: ['build/']
     },
-
     // Built stylesheets with less
     less: {
       build: {
@@ -29,19 +28,20 @@ module.exports = function(grunt) {
         }
       }
     },
-      watch:{
-
-        css:{
+    watch:{
+          options:{
+            spawn:false,
+            livereload:false
+         },
+         css:{
             files:['assets/less/*'],
             tasks:['less']
         },
         includes:{
-                files:['site/*.html','site/pages/*.html','site/**/*.html'],
+                files:['site/*.html','site/**/*.html'],
                 tasks:['includes']
-
         }
-
-      }
+   }
   });
 
   // Load plugins used by this task gruntfile
