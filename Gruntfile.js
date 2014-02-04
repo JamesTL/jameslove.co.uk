@@ -28,7 +28,20 @@ module.exports = function(grunt) {
           banner: '<!-- Site built using grunt includes! -->\n'
         }
       }
-    }
+    },
+      watch:{
+
+        css:{
+            files:['assets/less/*'],
+            tasks:['less']
+        },
+        includes:{
+                files:['site/*.html','site/pages/*.html','site/**/*.html'],
+                tasks:['includes']
+
+        }
+
+      }
   });
 
   // Load plugins used by this task gruntfile
@@ -36,8 +49,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-includes');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-connect');
+
 
   // Task definitions
-  grunt.registerTask('build', ['clean', 'less', 'includes']);
+  grunt.registerTask('build', ['clean', 'less', 'includes','watch']);
   grunt.registerTask('default', ['build']);
 };
