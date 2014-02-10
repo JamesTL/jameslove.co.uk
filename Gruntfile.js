@@ -10,7 +10,7 @@ module.exports = function(grunt) {
     // Built stylesheets with less
     less: {
       build: {
-        src: 'assets/less/*',
+        src: 'assets/css/less/*',
         dest: 'build/css/styles.css'
       }
     },
@@ -41,7 +41,10 @@ module.exports = function(grunt) {
                 files:['site/*.html','site/**/*.html'],
                 tasks:['includes']
         }
-   }
+   },
+      copy:{
+
+      }
   });
 
   // Load plugins used by this task gruntfile
@@ -51,6 +54,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-includes');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
 
   // Task definitions
